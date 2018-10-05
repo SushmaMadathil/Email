@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>UHCL EMAIL SYSTEM</title>
+        <style type="text/css">
+            
+        </style>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="refresh"/>
+        <link href="CSSviewemail.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        
+        <ui:composition template="Welcome.xhtml">
+            <ui:define name="viewcontent">
+                <h:form>
+                    <ul class="viewmenu">
+                        <li>
+                            <i class="fa fa-reply" aria-hidden="true"></i> <h:commandLink action="replytoemail">Reply</h:commandLink>  
+                        </li>
+                        <li>
+                            <i class="fa fa-share" aria-hidden="true"></i> <h:commandLink  action="forwardemail">Forward </h:commandLink> 
+                        </li>
+                        <li>
+                            <i class="fa fa-trash-o" aria-hidden="true"></i>  <h:commandLink action="#{login.loggedInId.Delete()}">Delete</h:commandLink>
+                        </li>
+                    </ul>
+                     
+                    
+                </h:form>       
+           
+        #{login.loggedInId.ComposeNewEmail(login.loggedInId.emailid, -100)}
+        <div id="original">
+            <h2>
+             #{login.loggedInId.readoriginal().title}<br/>   
+            </h2>
+            <hr class="style1"/>
+            <div class="iname">
+                <i class="fa fa-id-badge fa-3x" aria-hidden="true"></i> &nbsp;&nbsp; #{login.loggedInId.emailfromname(login.loggedInId.readoriginal().fromid)}
+            </div>
+            <div>
+                #{login.loggedInId.readoriginal().date}
+            </div>
+            
+            
+            <p id="ocontent">
+                 #{login.loggedInId.readoriginal().content}
+            </p>
+           
+            
+        </div>
+                
+        <div>
+         
+          
+          <h:form>
+          
+          <h:dataTable value="#{login.loggedInId.replyemails}" var="e">
+            
+                <h:column>
+                    <hr class="style2"></hr>
+                   
+                    
+                    <div class="iname">
+                        From : #{login.loggedInId.emailfromname(e.fromid)}
+                    </div>
+                    
+                    <div>
+                        #{e.date}
+                    </div>
+                    <p class="rcontent">
+                        #{e.content}
+                    </p>
+                    
+                </h:column>
+            
+            </h:dataTable>
+              
+          
+          
+          
+          
+          </h:form>
+          
+          
+        </div>
+                 </ui:define>
+        </ui:composition>
+    </h:body>
+    
+</html>
+

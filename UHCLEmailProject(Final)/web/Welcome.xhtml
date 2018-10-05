@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        
+        <link href="CSSWelcome.css" rel="stylesheet" type="text/css"/>
+        <link href="CSSlistcontent.css" rel="stylesheet" type="text/css"/>
+        <link href="CSSviewemail.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+        <style>
+             html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
+        .w3-bar-block .w3-bar-item {padding: 16px}
+        </style>
+       
+    </h:head>
+    <h:body>        
+        <div>   
+            
+        <div id="nav">
+            <ui:insert name="nav">
+                <ui:include src="Navigation.xhtml"/>                           
+            </ui:insert>
+        </div>
+        
+        <div id="listcontent">
+            <ui:insert name="listcontent">
+                
+            </ui:insert>
+        </div>
+        
+        <div id="viewcontent">
+            <ui:insert name="viewcontent">
+                
+            </ui:insert>
+        </div>
+          
+            
+       </div>
+    </h:body>
+</html>

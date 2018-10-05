@@ -1,0 +1,39 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 12, 2017, 8:09:34 PM
+    Author     : sonal
+*/
+
+h1{
+    text-align: center;
+    
+    font-size: 30px;
+    color: brown;
+    font-family: sans-serif;
+    padding: 20px;
+    margin-top: 0px;
+}
+.index{
+    text-align: center;
+    
+}
+p {
+    margin-top: 200px;
+    
+}
+.body{
+    background-image: url(bg-6-full.jpg);
+    opacity: 30px;
+}
+
+.link{
+    background-color: black;
+    color: white;
+    font-size: 26px;
+    font-family: sans-serif;
+    border-radius: 8px;
+}

@@ -1,0 +1,81 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 30, 2017, 2:02:11 PM
+    Author     : sonal
+*/
+.viewmenu {
+    list-style-type: none;
+    margin-top:  10px;
+  
+    overflow: hidden; 
+    padding-left: 20px;
+    
+}
+
+.viewmenu li {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    display: block;
+    text-align: center;
+    border-right: 10px;
+}
+
+.viewmenu li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-right: 10px;
+}
+
+.viewmenu li:hover:not(.active) {
+    background-color: #ddd;
+     
+}
+
+.viewmenu li a.active {
+    color: white;
+    background-color: #4CAF50;
+}
+
+#ocontent
+{
+    padding-top: 20px;
+}
+.rcontent
+{
+    padding-top: 20px;
+}
+#scontent
+{
+    padding-top: 20px;
+}
+
+#ocontent
+{
+    text-decoration: none;
+}
+
+hr.style1 { 
+  border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+
+hr.style2
+{
+    
+    
+    height: 6px;
+	background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
+    border: 0;
+}

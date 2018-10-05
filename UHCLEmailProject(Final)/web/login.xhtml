@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Login</title>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="refresh"/>
+        <link href="login_register.css" rel="stylesheet" type="text/css"/>
+        
+    </h:head>
+    <h:body class="body1">
+        <div>
+        <h:form>
+            <h3>Login to your Email Account</h3><br></br>
+            <p class="label">Enter your Email id:</p>
+                <h:inputText class ="input" id="emailid" required="true" requiredMessage="Emailid field cannot be left empty" 
+                             title="Enter your emaiid" value="#{login.emailid}" 
+                             validatorMessage="The id must contain letter and digits">
+                    <f:validateLength maximum="10" minimum="2"></f:validateLength>
+                </h:inputText>
+            <br></br>
+                <p class="label">Enter your Password:</p>
+                <h:inputText class="input" id="password" required="true" requiredMessage="Passoword field cannot be left empty" 
+                             title="Enter your password" value="#{login.password}" 
+                             validatorMessage="Password must contain digits">
+                    <f:validateLength maximum="8" minimum="4"></f:validateLength> 
+                </h:inputText>                
+                <br></br>
+             <p>
+                 <h:commandButton class="btn" id="submit" value="Submit" action="#{login.Login()}">
+                    
+                </h:commandButton>                 
+                
+            </p>
+        </h:form>
+        </div>
+    </h:body>
+</html>

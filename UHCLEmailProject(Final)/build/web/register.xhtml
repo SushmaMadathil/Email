@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Register for UHCL email System</title>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="refresh"/>
+        
+
+        <link href="login_register.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <ui:composition template="RegistrationPage.xhtml">
+            <ui:define name="register">
+                <h:form>
+            <h3>Create a New Email Account</h3><br/>
+            
+            <p class="label">Enter your first Name </p>
+                <h:inputText class="input"  
+                             required="true" 
+                             requiredMessage="Field cannot left empty"
+                             title="Enter your first name" 
+                             value="#{registration.fname}"
+                             validatorMessage="Please use a correct format for firstname">
+                    <f:validateLength maximum="10" minimum="2"></f:validateLength>
+                </h:inputText>
+            <br></br><br></br>
+            
+            
+            <p class="label">Enter your Last Name </p> 
+            
+                <h:inputText class="input"  
+                             required="true" 
+                             requiredMessage="Cannot left last name empty" 
+                             title="Enter your last name" 
+                             value="#{registration.lname}"
+                             validatorMessage="Please use correct format for last name">
+                    <f:validateLength maximum="10" minimum="2"/>
+                </h:inputText>
+           <br></br><br></br>
+           
+           
+            <p class="label">Enter preferred Email Id </p>
+            
+                <h:inputText class="input" 
+                             required="true" 
+                             requiredMessage="Email id cannot left blank" 
+                             value="#{registration.emailid}"  
+                             validatorMessage="Please use a correct format">
+                    
+                </h:inputText>
+            <br></br><br></br>
+            
+            
+            <p class="label">Enter a password </p>
+            
+                <h:inputText class="input"  
+                             required="true" 
+                             requiredMessage="Please enter password" 
+                             title="Enter password" 
+                             value="#{registration.password}"
+                             validatorMessage="Please enter password">
+                    <f:validateLength maximum="10" minimum="2"></f:validateLength>
+                </h:inputText><br/>
+            
+            
+            <p>
+                <h:commandButton class="btn" id="submit" value="submit" action="confirm1.xhtml">                 
+                </h:commandButton>
+                
+            </p>
+            
+        </h:form>
+            </ui:define>
+        </ui:composition>
+        
+    </h:body>
+</html>

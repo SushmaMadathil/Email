@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        
+    </h:head>
+    <h:body>
+        <ui:composition template="Welcome.xhtml">
+            <ui:define name="nav">
+           <nav>            
+               <div class="name" style="margin-bottom: 10px;">
+                <h3><b>Welcome, <br/> #{login.loggedInId.firstname} #{login.loggedInId.lastname}</b></h3>
+            </div>
+               
+               
+               <div id="btnbox">
+                <i class="fa fa-envelope fa-4x" aria-hidden="true"></i><br/>
+                <div ><br/>
+                    <h:link class="navbtn" outcome="ComposeEmail">New Message  <i class="w3-padding fa fa-pencil w3-right"></i></h:link><br/>
+                </div>
+                
+                <div>
+                    <h:link class="navbtn" outcome="Inbox">Inbox  <i class="w3-padding fa fa-inbox w3-right"></i></h:link> <br/>
+                </div>
+                
+                <div>
+                    <h:link class="navbtn"  outcome="sentemail">Sent Emails  <i class="w3-padding fa fa-paper-plane w3-right"></i></h:link><br/> 
+                </div>
+                
+                <div>
+                    <h:link class="navbtn"  outcome="trashemail">Trash  <i class="w3-padding fa fa-trash-o w3-right"></i></h:link><br/> 
+                </div>
+                
+                               
+                           
+            </div>
+               
+               
+               <h:form>
+                   
+               
+                   <h:commandButton  class="allbtn" id="SignOut" value="Sign Out"
+                                 action="#{login.loggedInId.signOut()}" /> 
+              </h:form>
+              
+        </nav>
+            </ui:define>
+        </ui:composition>
+                        
+                        
+    </h:body>
+</html>

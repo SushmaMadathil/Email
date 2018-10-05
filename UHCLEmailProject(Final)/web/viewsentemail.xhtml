@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title></title>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="refresh"/>
+    </h:head>
+    <h:body>
+        <ui:composition template="Welcome.xhtml">
+            <ui:define name="viewcontent">
+                 <h:form>
+                    <ul class="viewmenu">
+                        
+                        <li>
+                            <i class="fa fa-share" aria-hidden="true"></i> <h:commandLink  action="forwardemail">Forward </h:commandLink> 
+                        </li>
+                        <li>
+                            <i class="fa fa-trash-o" aria-hidden="true"></i>  <h:commandLink action="#{login.loggedInId.Delete()}">Delete</h:commandLink>
+                        </li>
+                    </ul>
+                     
+                    
+                </h:form>     
+                
+                
+         <div id="sent">
+            <h2>
+             #{login.loggedInId.viewsent().title}<br/>   
+            </h2>
+            <hr/>
+            <h4>
+             <i class="fa fa-id-badge fa-3x" aria-hidden="true"></i> #{login.loggedInId.emailfromname(login.loggedInId.viewsent().toid)}<br/>  
+            </h4>
+            <div style="float : left; margin-left: 20px">
+                #{login.loggedInId.readoriginal().date}
+            </div>
+            
+            <hr/>
+            <p id="scontent">
+                 #{login.loggedInId.viewsent().content}
+            </p>
+           
+            
+        </div>  
+        
+        
+         </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

@@ -1,0 +1,28 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 30, 2017, 5:50:48 PM
+    Author     : sonal
+*/
+#fname {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+#fname , #fcontent , #ftitle, #rtitle, #rname
+{
+    margin-top:  20px;
+}
+
+
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}

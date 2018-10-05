@@ -1,0 +1,58 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 29, 2017, 11:28:21 PM
+    Author     : sonal
+*/
+
+
+
+#heading
+{
+    font-size: 14px;
+    color:  brown;
+    padding: 3px;
+}
+/*.col
+{
+   width: 300px;
+    padding: 3px;
+    background-color: #cccccc;
+    
+    
+}
+.col a{
+    text-decoration: none;
+}*/
+
+.tab {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 10px;
+    
+}
+
+.iname
+{
+    font-size: 18px;
+    font-style:  oblique;
+}
+
+
+#col {
+    background-color: #f2f2f2;
+    margin-left: 20px;
+}
+
+#tab tr:hover {background-color: #ddd;}
+
+.ititle
+{
+    text-decoration: none;
+    color:  coral;
+}
+

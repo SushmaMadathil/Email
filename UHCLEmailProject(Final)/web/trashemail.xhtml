@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Trash</title>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="refresh"/>
+        
+    </h:head>
+    <h:body>
+        <ui:composition template="Welcome.xhtml">
+            <ui:define name="listcontent"> 
+                
+           <div id="heading">                    
+                    <h1><b>Trash Emails</b></h1>
+                    <hr/>
+                </div> 
+        <h:form>
+        
+            <h:dataTable class="tab" value="#{login.loggedInId.TrashEmails()}" var="e">
+            <h:column>
+                <div class="col">
+                    <div class="iname">
+                     <i class="fa fa-id-badge fa-3x" aria-hidden="true"></i> &nbsp;&nbsp;   #{login.loggedInId.emailfromname(e.toid)}   <h:commandLink style="float: right" action="#{login.loggedInId.emailToView(e.id, 'd')}"><i class="fa fa-trash-o" aria-hidden="true"></i></h:commandLink>
+                    </div> <br/>
+                    #{e.date} <br/>
+                    <h:commandLink class="ititle" value="#{e.title}" action="#{login.loggedInId.emailToView(e.id, 's')}"/>
+                    <hr style="color: black"/>
+                </div>
+                
+            </h:column>
+            
+        </h:dataTable>
+            
+              
+        </h:form>
+        </ui:define>
+        </ui:composition>
+    </h:body>
+    
+</html>
